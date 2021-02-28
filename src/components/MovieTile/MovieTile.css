@@ -1,0 +1,36 @@
+.movie-tile {
+  margin-bottom: 55px;
+  cursor: pointer;
+}
+
+.movie-poster {
+  display: block;
+  width: 320px;
+  height: 450px;
+  margin-bottom: 25px;
+}
+
+.movie-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-name {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.movie-year {
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0 15px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.movie-genre {
+  color: #fff;
+}
