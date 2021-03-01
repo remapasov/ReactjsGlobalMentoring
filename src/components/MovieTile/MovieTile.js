@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MovieTile.css';
 
 export function MovieTile(props) {
@@ -20,3 +21,7 @@ export function MovieTile(props) {
     </div>
   );
 }
+
+MovieTile.propTypes = {
+  movieData: PropTypes.object,
+};

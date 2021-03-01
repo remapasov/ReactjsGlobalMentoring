@@ -1,5 +1,6 @@
 import React from 'react';
-import { MovieTile } from '../components/MovieTile/MovieTile'
+import { MovieTile } from '../components/MovieTile/MovieTile';
+import { ErrorBoundaryTile } from '../components/ErrorBoundaryTile/ErrorBoundaryTile';
 import './styles/MovieContainer.css';
 
 export function MovieContainer() {
@@ -29,10 +30,7 @@ export function MovieContainer() {
       posterUrl: 'PulpFiction.jpg'
     },
     {
-      name: 'The Hateful Eight',
-      description: 'Action, Detective',
-      year: '2016',
-      posterUrl: 'TheHatefulEight.jpg'
+      name: {test: 'The Hateful Eight'}
     },
     {
       name: 'Inglourious Basterds',
@@ -47,10 +45,12 @@ export function MovieContainer() {
       {
         movies.map((el, key) => {
           return (
-            <MovieTile
-              key={key}
-              movieData={el}
-            />
+            <ErrorBoundaryTile>
+              <MovieTile
+                key={key}
+                movieData={el}
+              />
+            </ErrorBoundaryTile>
           )
         })
       }
